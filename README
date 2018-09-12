@@ -1,0 +1,28 @@
+import keys like
+1 - gpg --import < pgp\ key\ for\ apachecon.eml
+
+1 - generate the list of key
+   keys.sh > keys.all
+
+2 - import the key for the servers
+   importkeys.sh
+
+Put the keys in keys.all
+./party-table-new.pl keys.all > out.html
+
+Get the new keyring
+bash keyring.sh
+
+Copy the stuff: (sftp.batch) AKA:
+sftp -b sftp.batch jfclere@people.apache.org
+
+message to participants:
+Thanks
+
+Your key is ready for the party: http://people.apache.org/~jfclere/2015EUKeyring/out.html
+
+See you at the party ;-)
+
+Cheers
+
+Jean-Frederic
