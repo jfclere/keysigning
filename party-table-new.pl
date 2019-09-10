@@ -15,20 +15,26 @@ while (my $id = shift(@ids)) {
     chomp @fp;
     my @fpdata; 
     my $fingerprint;
+    my $owner;
     while (my $line = shift(@fp)) {
-#        print "$line\n";
+        #print "$line\n";
         if ($line =~ m/^pub/) {
             @fpdata = split /:/, $line;
         } elsif ($line =~ m/^fpr/) {
             my (undef,undef,undef,undef,undef,undef,undef,undef,undef,$foo)
                 = split /:/, $line;
             $fingerprint = $foo;
+        } elsif ($line =~ m/^uid/) {
+            my ($uid,undef,undef,undef,undef,undef,undef,undef,undef,$foo)
+                = split /:/, $line;
+            $owner = $foo;
+            last;
         } else {
             next;
         }
     }
     my ($pub,$comptrust,$size,$type,$longid,$date,undef,
-        undef,$settrust,$owner,undef,undef,$flags,undef) = @fpdata;
+        undef,$settrust,undef,undef,undef,$flags,undef) = @fpdata;
 
     if($type eq '17') {
         $type = 'DSA';
@@ -56,6 +62,7 @@ while (my $id = shift(@ids)) {
             }
         }
     }
+    print "$owner\n";
     $owner =~ s/&/&amp;/;
     $owner =~ s/</&lt\;/;
     $owner =~ s/>/&gt\;/;

@@ -7,10 +7,13 @@ The key id, names and email are collected via a google export.
 Get a zip file from "Download Response" in the form.
 
 Unzip the file containing the Responses
+
 unzip Event\ Registration.csv.zip
 
-Process the Response to a list of key id, the list is in keys.all
+Process the Response to a list of key id, the list is in keys.all and import the key locally:
+
 bash keys.sh
+bash importkeys.sh
 
 If something goes wrong... Normal email the guy with the key, ask to check the process.
 
@@ -29,7 +32,9 @@ Once the key are in keys.all file generate the keyring and html page.
 bash keyring.sh
 
 Send the file to people.apache.org (using you apache id) check sftp.batch for the location...
-Use sftp like:  ftp jfclere@people.apache.org cd public_html; mkdir 2019NAKeyring.
+Use sftp like:
+
+ftp jfclere@people.apache.org cd public_html; mkdir 2019NAKeyring.
 
 sftp -b sftp.batch jfclere@people.apache.org
 
