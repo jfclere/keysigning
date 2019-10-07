@@ -2,8 +2,8 @@
 use strict;
 use utf8;
 
-print "<HTML><HEAD><TITLE>ApacheCon NA 2019 PGP Keysigning Key List</TITLE><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></HEAD>\n";
-print "<BODY><H1>ApacheCon NA 2019 PGP Keysigning Key List</H1><TABLE BORDER=1>\n";
+print "<HTML><HEAD><TITLE>ApacheCon EU 2019 PGP Keysigning Key List</TITLE><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></HEAD>\n";
+print "<BODY><H1>ApacheCon EU 2019 PGP Keysigning Key List</H1><TABLE BORDER=1>\n";
 print "<TR><TH>&nbsp;</TH><TH>Key ID</TH><TH>Owner</TH><TH>Fingerprint</TH>";
 print "<TH>Size</TH><TH>Type</TH><TH>Key Info Matches?</TH><TH>Owner ID Matches?</TH></TR>\n";
 
