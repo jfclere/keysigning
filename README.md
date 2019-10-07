@@ -13,6 +13,7 @@ unzip Event\ Registration.csv.zip
 Process the Response to a list of key id, the list is in keys.all and import the key locally:
 
 bash keys.sh
+
 bash importkeys.sh
 
 If something goes wrong... Normal email the guy with the key, ask to check the process.
